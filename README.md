@@ -1,2 +1,2 @@
-# ninjaGame
-2 many ninjas
+# apeGame
+2 many apes
