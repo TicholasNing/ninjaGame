@@ -2,21 +2,21 @@ package main;
 
 import javafx.scene.Node;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-public class Character extends GameObject/* extends ImageView*/{
+public  class Character extends GameObject/* extends ImageView*/{
 	
-	private Node view;
-	private int x, y;
+	Character() {
+		super(new ImageView());
+		
+	}
+	
 	private int score;
 	private BlockDir blockDirection;
-	private Image sprite;
+	private Image sprite = new Image("Shuriken.jpg");
 	private boolean alive;
 	
-	public Character (Node view){
-		this.view = view;
-		alive = true;
-		blockDirection = BlockDir.rest;
-	}
+	
 	
 	public void update(){
 		
@@ -25,15 +25,27 @@ public class Character extends GameObject/* extends ImageView*/{
 	public Image getSprite() {
 		return sprite;
 	}
-	public void setSprite(Image sprite) {
-		this.sprite = sprite;
+	public void setSprite() {
+		switch (blockDirection){
+		case leftDown:
+			break;
+		case left:
+			break;
+		case leftUp:
+			break;
+		case rest:
+			break;
+		case rightDown:
+			break;
+		case right:
+			break;
+		case rightUP:
+			break;
+		case up:
+			break;
+		}
 	}
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
+
 
 	public BlockDir getBlockDirection() {
 		return blockDirection;

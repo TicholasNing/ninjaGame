@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -21,10 +22,12 @@ public class Driver extends Application {
 	
 	private Pane root;
 	private ObjectHandler handler;
+	private Character player;
 	
 	private Parent createContent() {
 		root = new Pane();
 		root.setPrefSize(900, 600);
+		//player = ;
 		
 		AnimationTimer timer = new AnimationTimer(){
 			@Override
@@ -40,7 +43,7 @@ public class Driver extends Application {
 
 	
 	protected void onUpdate() {
-		handler.update();
+		
 	}
 
 
@@ -49,7 +52,19 @@ public class Driver extends Application {
 		
 		
 		stage.setScene(new Scene(createContent()));
-		
+		stage.getScene().setOnKeyPressed(e -> {
+			
+			if(e.getCode() == KeyCode.LEFT){
+				
+			}
+			if (e.getCode() == KeyCode.UP) {
+
+			}
+			if (e.getCode() == KeyCode.RIGHT) {
+
+			}
+			
+		});
 		stage.show();
 	}
 	
